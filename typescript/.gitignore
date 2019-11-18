@@ -1,0 +1,12 @@
+package-lock.json
+dist/
+dist
+node_modules/
+node_modules
+.idea/
+.idea
+
+**/*.js
+**/*.map
+**/*.source
+!webpack.config.js
