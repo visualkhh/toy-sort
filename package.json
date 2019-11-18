@@ -1,0 +1,32 @@
+{
+  "name": "toy-sort",
+  "version": "1.0.0",
+  "description": "- npm init - tsc --init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visualkhh/toy-sort.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visualkhh/toy-sort/issues"
+  },
+  "homepage": "https://github.com/visualkhh/toy-sort#readme",
+  "dependencies": {
+    "@types/core-js": "^2.5.2",
+    "@types/es6-promise": "^3.3.0",
+    "path": "^0.12.7",
+    "rxjs": "^6.5.3",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

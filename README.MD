@@ -1,0 +1,2 @@
+- npm init
+- tsc --init
