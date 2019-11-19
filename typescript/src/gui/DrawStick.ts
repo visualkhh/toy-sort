@@ -1,8 +1,6 @@
 import {Draw} from "./Draw";
-import {isNumeric} from "rxjs/internal-compatibility";
-import {timer} from "rxjs";
 export class Stick {
-    constructor(public value: number, public fillStyle= '#000', public strokeStyle= '#f00'){}
+    constructor(public value: number, public fillStyle= '#000000', public strokeStyle= '#f00', public lineWidth= 0.5){}
 }
 export class DrawStick extends Draw {
 
@@ -58,25 +56,16 @@ export class DrawStick extends Draw {
     }
 
     draw(context: CanvasRenderingContext2D) {
-        // console.log('tick->', this.tickCnt);
         this.clear();
-        // context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         for (let i = 0; i < this.sticks.length; i++) {
             const stick = this.sticks[i];
-            // console.log('--1>>', i, stick.value);
             context.strokeStyle = stick.strokeStyle;
-            // console.log('--2>>', i, stick.value);
             context.fillStyle = stick.fillStyle;
-            // console.log('--3>>', i, stick.value);
+            context.lineWidth = stick.lineWidth;
             context.beginPath();
             context.rect(this.getStartStickX(i), this.getStartStickY(stick.value), this.getStickWidth(), this.canvas.height);
-            // console.log('--4>>', i, stick.value);
             context.fill();
-            // console.log('--5>>', i, stick.value);
             context.stroke();
-            // console.log('--6>>', i, stick.value);
-            // context.strokeRect(this.getStartStickX(i), this.getStartStickY(stick.value), this.canvas.height, this.canvas.height);
-            // context.restore();
         }
 
         // timer(100).subscribe(it => this.clear());

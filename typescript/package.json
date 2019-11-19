@@ -24,6 +24,7 @@
     "@types/es6-promise": "^3.3.0",
     "path": "^0.12.7",
     "rxjs": "^6.5.3",
+    "rxjs-compat": "^6.5.3",
     "webpack": "^4.41.2",
     "webpack-dev-server": "^3.9.0"
   },

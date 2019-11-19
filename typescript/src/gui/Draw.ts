@@ -15,9 +15,8 @@ export abstract class Draw {
     }
     public clear() {
         const context = this.context;
-        // this.clearRect(0, 0, this.canvas.width, this.canvas.height);
         context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        // this.reset();
+        this.reset();
     }
 
     public reset() {
