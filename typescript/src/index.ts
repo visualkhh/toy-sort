@@ -19,7 +19,7 @@ const launcher = {
         }
         const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
         let drawStick = new DrawStick(canvas);
-        const randomData = Sort.getRandomData();
+        const randomData = Sort.getRandomData(200);
         drawStick.stickNumbers = randomData;
         drawStick.tick();
         let sort: SortStickSnapshot;
@@ -31,7 +31,8 @@ const launcher = {
         }
 
         const snapshot = sort.getSnapshot();
-        const intervalVal = 1000 / snapshot.length;
+        // const intervalVal = 1000 / snapshot.length;
+        const intervalVal = 1;
         console.log(type+' Sort milliseconds', sort.milliseconds);
         const start = new Date().getTime();
         subscription = interval(intervalVal).take(snapshot.length).map(idx => snapshot[idx]).subscribe(it => {
